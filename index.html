@@ -279,6 +279,44 @@
         .image-adjust-controls input[type="range"] {
             width: 200px;
         }
+        footer {
+            background-color: #2a2a3e;
+            color: #e0e0e0;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 2px solid #60a5fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #3b82f6;
+        }
+        .social-icons {
+            margin: 15px 0;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            filter: invert(70%) sepia(50%) saturate(500%) hue-rotate(180deg) brightness(100%) contrast(100%);
+            transition: filter 0.3s;
+        }
+        .social-icons a:hover img {
+            filter: invert(50%) sepia(70%) saturate(600%) hue-rotate(180deg) brightness(110%) contrast(110%);
+        }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -297,6 +335,9 @@
             }
             .image-adjust-modal-content {
                 width: 95%;
+            }
+            footer {
+                padding: 15px;
             }
         }
     </style>
@@ -537,6 +578,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Developed by <strong>Intellex Technologies</strong> &copy; 2025. All rights reserved.</p>
+        <p>Craft professional tools like this with us! Contact: <a href="mailto:info@intellex.site">info@intellex.site</a> | Visit: <a href="https://www.intellex.site" target="_blank">www.intellex.site</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://x.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/twitter.png" alt="X"></a>
+            <a href="https://www.threads.net/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/threads.png" alt="Threads"></a>
+            <a href="https://www.youtube.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/youtube.png" alt="YouTube"></a>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
