@@ -1478,10 +1478,13 @@ Communicated regularly with stakeholders to ensure alignment and transparency`;
             alert('Resume updated successfully! You can now download the PDF.');
         });
 
-        // Enhanced PDF download with professional styling and image support
+// Enhanced PDF download with professional styling and image support
         function downloadPDF() {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
+            
+            // Generate unique filename with timestamp to prevent browser caching
+            const timestamp = new Date().getTime();
             
             // Get data
             const name = document.getElementById('previewName').textContent;
