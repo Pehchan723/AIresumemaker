@@ -1,0 +1,55 @@
+# robots.txt for Professional AI Resume Builder - Intellex Technologies
+# Updated: 2025-01-15
+
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the entire site
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+Allow: /images/
+Allow: /assets/
+
+# Disallow sensitive or unnecessary directories (add as needed)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /user-data/
+
+# Sitemap location
+Sitemap: https://www.intellex.site/sitemap.xml
+
+# Crawl-delay (optional - helps manage server load)
+# Crawl-delay: 10
+
+# Specific bot instructions (optional)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 10
+
+# Block bad bots (optional - add known malicious crawlers)
+User-agent: AhrefsBot
+Crawl-delay: 30
+
+User-agent: SemrushBot
+Crawl-delay: 30
+
+# Social media bots (allow for rich previews)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
