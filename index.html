@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional AI Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.7.13/dist/face-api.min.js"></script>
+</head>
+<body>
+    <h1>Professional AI Resume Builder</h1>
+    <div class="container">
+        <div class="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="resumeForm">
+                <div class="form-group">
+                    <label for="profileImage">Profile Image</label>
+                    <div class="image-upload-section" id="imageUploadArea">
+                        <div class="image-preview" id="imagePreview">
+                            <img id="previewImg" src="" alt="Profile Preview">
+                        </div>
+                        <p id="uploadText">Drag and drop your image here or</p>
+                        <button type="button" class="image-upload-btn" onclick="document.getElementById('profileImageInput').click()">Choose Image</button>
+                        <input type="file" id="profileImageInput" accept="image/*" style="display: none;">
+                        <div id="imageControls" style="display: none; margin-top: 10px;">
+                            <button type="button" class="image-adjust-btn" onclick="adjustImage()">Adjust Image</button>
+                            <button type="button" class="image-bg-remove-btn" onclick="removeBackground()">Remove Background</button>
+                            <button type="button" class="remove-btn" onclick="removeImage()">Remove Image</button>
+                        </div>
+                        <p style="font-size: 12px; margin-top: 10px; color: #888;">Recommended: Square image, max 2MB</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="jobTitle">Job Title/Designation</label>
+                    <input type="text" id="jobTitle" placeholder="UX Designer">
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john.doe@example.com">
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="+1 2345 6789">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="New York, USA">
+                </div>
+                <div class="form-group">
+                    <label for="profile">Profile Summary</label>
+                    <textarea id="profile" placeholder="Brief professional summary highlighting your expertise and goals"></textarea>
+                    <button type="button" class="ai-suggest-btn" onclick="suggestProfile()">AI Generate Profile</button>
+                </div>
+                
+                <div class="form-group" id="educationSection">
+                    <label>Education</label>
+                    <div id="educationEntries">
+                        <div class="entry">
+                            <h4>Education Entry</h4>
+                            <div class="form-row">
+                                <input type="text" class="education-degree" placeholder="Degree (e.g., Bachelor of Science)">
+                                <input type="text" class="education-field" placeholder="Field of Study">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" class="education-university" placeholder="University/Institution">
+                                <input type="text" class="education-year" placeholder="Year (e.g., 2018-2022)">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" class="education-grade" placeholder="Grade/GPA (optional)">
+                                <input type="text" class="education-location" placeholder="Location">
+                            </div>
+                            <button type="button" class="remove-btn" onclick="removeEntry(this.parentElement)">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addEducationEntry()">Add Education</button>
+                    <button type="button" class="ai-suggest-btn" onclick="suggestEducation()">AI Suggest Education</button>
+                </div>
+
+                <div class="form-group" id="experienceSection">
+                    <label>Work Experience</label>
+                    <div id="experienceEntries">
+                        <div class="entry">
+                            <h4>Experience Entry</h4>
+                            <div class="form-row">
+                                <input type="text" class="experience-title" placeholder="Job Title">
+                                <input type="text" class="experience-company" placeholder="Company Name">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" class="experience-duration" placeholder="Duration (e.g., Jan 2020 - Dec 2022)">
+                                <input type="text" class="experience-location" placeholder="Location">
+                            </div>
+                            <textarea class="experience-responsibilities" placeholder="Key responsibilities and achievements (use bullet points)"></textarea>
+                            <button type="button" class="ai-suggest-btn" onclick="suggestResponsibilities(this)">AI Generate Responsibilities</button>
+                            <button type="button" class="remove-btn" onclick="removeEntry(this.parentElement)">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addExperienceEntry()">Add Experience</button>
+                    <button type="button" class="ai-suggest-btn" onclick="suggestExperience()">AI Suggest Experience</button>
+                </div>
+
+                <div class="form-group" id="skillsSection">
+                    <label>Skills</label>
+                    <div id="skillsEntries">
+                        <div class="entry">
+                            <input type="text" class="skill-entry" placeholder="e.g., JavaScript, Project Management">
+                            <button type="button" class="remove-btn" onclick="removeEntry(this.parentElement)">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addSkillEntry()">Add Skill</button>
+                    <button type="button" class="ai-suggest-btn" onclick="suggestSkills()">AI Suggest Skills</button>
+                </div>
+
+                <div class="form-group" id="languagesSection">
+                    <label>Languages</label>
+                    <div id="languagesEntries">
+                        <div class="entry">
+                            <input type="text" class="language-entry" placeholder="e.g., English, Spanish">
+                            <button type="button" class="remove-btn" onclick="removeEntry(this.parentElement)">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addLanguageEntry()">Add Language</button>
+                    <button type="button" class="ai-suggest-btn" onclick="suggestLanguages()">AI Suggest Languages</button>
+                </div>
+
+                <div class="form-group" id="hobbiesSection">
+                    <label>Hobbies</label>
+                    <div id="hobbiesEntries">
+                        <div class="entry">
+                            <input type="text" class="hobby-entry" placeholder="e.g., Photography, Cooking">
+                            <button type="button" class="remove-btn" onclick="removeEntry(this.parentElement)">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addHobbyEntry()">Add Hobby</button>
+                    <button type="button" class="ai-suggest-btn" onclick="suggestHobbies()">AI Suggest Hobbies</button>
+                </div>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+        
+        <div class="preview-section">
+            <h2>Resume Preview</h2>
+            <div class="preview-content" id="preview">
+                <div class="resume-header">
+                    <div class="resume-left">
+                        <div class="profile-img" id="profileImagePreview">👤</div>
+                        <h3 id="previewName">MAX JOHNSON</h3>
+                        
+                        <h4>Contact</h4>
+                        <div>
+                            <strong>Address</strong><br>
+                            <span id="previewAddress">New York, USA</span>
+                        </div>
+                        <br>
+                        <div>
+                            <strong>Phone</strong><br>
+                            <span id="previewPhone">+1 2345 6789</span>
+                        </div>
+                        <br>
+                        <div>
+                            <strong>Email</strong><br>
+                            <span id="previewEmail">max.johnson@email.com</span>
+                        </div>
+
+                        <h4>Skills</h4>
+                        <ul id="previewSkills">
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>Sketch</li>
+                        </ul>
+
+                        <h4>Languages</h4>
+                        <ul id="previewLanguages">
+                            <li>English</li>
+                            <li>French</li>
+                        </ul>
+
+                        <h4>Hobbies</h4>
+                        <ul id="previewHobbies">
+                            <li>Photography</li>
+                            <li>Football</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resume-right">
+                        <h2 id="previewNameRight">MAX JOHNSON</h2>
+                        <div class="job-title" id="previewJobTitle">UX Designer</div>
+                        
+                        <h3>Profile</h3>
+                        <p id="previewProfile">Experienced UX Designer specializing in user research, interaction design, and prototyping. Committed to crafting intuitive and visually compelling digital experiences that captivate users.</p>
+                        
+                        <h3>Work Experience</h3>
+                        <div id="previewExperience">
+                            <div class="experience-item">
+                                <h4>Senior UX Designer</h4>
+                                <div class="experience-meta">ABC Tech Solutions - New York | Jan 2020 - Dec 2022</div>
+                                <ul>
+                                    <li>Led UX team for mobile banking app, boosting user engagement by 30% in six months.</li>
+                                    <li>Conducted in-depth user research, reducing e-commerce cart abandonment by 25% through redesign.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3>Education</h3>
+                        <div id="previewEducation">
+                            <div class="education-item">
+                                <h4>Master of Science in HCI</h4>
+                                <div class="education-meta">New York University - New York | Jan 2016 - Dec 2018</div>
+                            </div>
+                        </div>
+                        <h3>References</h3>
+                        <p>Available upon request</p>
+                    </div>
+                </div>
+            </div>
+            <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
+        </div>
+    </div>
+
+    <!-- Image adjustment modal -->
+    <div class="image-adjust-modal" id="imageAdjustModal">
+        <div class="image-adjust-modal-content">
+            <h3>Adjust Image</h3>
+            <canvas id="imageAdjustCanvas"></canvas>
+            <div class="image-adjust-controls">
+                <label for="imageScale">Scale:</label>
+                <input type="range" id="imageScale" min="0.5" max="2" step="0.1" value="1">
+                <label for="imageBrightness">Brightness:</label>
+                <input type="range" id="imageBrightness" min="0" max="2" step="0.1" value="1">
+                <label for="imageContrast">Contrast:</label>
+                <input type="range" id="imageContrast" min="0" max="2" step="0.1" value="1">
+            </div>
+            <div style="margin-top: 20px;">
+                <button type="button" class="image-upload-btn" onclick="applyImageAdjustments()">Apply</button>
+                <button type="button" class="remove-btn" onclick="closeImageAdjustModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Developed by <strong>Intellex Technologies</strong> &copy; 2025. All rights reserved.</p>
+        <p>Craft professional tools like this with us! Contact: <a href="mailto:info@intellex.site">info@intellex.site</a> | Visit: <a href="https://www.intellex.site" target="_blank">www.intellex.site</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://x.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/twitter.png" alt="X"></a>
+            <a href="https://www.threads.net/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/threads.png" alt="Threads"></a>
+            <a href="https://www.youtube.com/yourprofile" target="_blank"><img src="https://img.icons8.com/ios-filled/24/youtube.png" alt="YouTube"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
