@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Contact Us | CVPilotHub - Resume Builder Support</title>
+    <meta name="title" content="Contact Us | CVPilotHub - Resume Builder Support">
+    <meta name="description" content="Get in touch with CVPilotHub. Contact our support team for assistance, feedback, partnerships, or general inquiries.">
+    <meta name="keywords" content="contact CVPilotHub, customer support, help, feedback, partnerships, contact form">
+    <meta name="author" content="CVPilotHub">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.cvpilothub.com/contact">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cvpilothub.com/contact">
+    <meta property="og:title" content="Contact Us - CVPilotHub">
+    <meta property="og:description" content="Get in touch with the CVPilotHub support team. We're here to help!">
+    <meta property="og:site_name" content="CVPilotHub">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - CVPilotHub">
+    <meta name="twitter:description" content="Contact CVPilotHub support team for help and inquiries.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#60a5fa">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Contact Us",
+      "url": "https://www.cvpilothub.com/contact",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CVPilotHub",
+        "url": "https://www.cvpilothub.com",
+        "logo": "https://www.cvpilothub.com/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-XXX-XXX-XXXX",
+          "contactType": "Customer Service",
+          "email": "support@cvpilothub.com"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+
+        /* Header */
+        header {
+            background-color: #1f2937;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #60a5fa;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav a {
+            color: #f3f4f6;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Contact Form Section */
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Info Section */
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #60a5fa;
+        }
+
+        .info-card h3 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .info-card a:hover {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+        }
+
+        .contact-item strong {
+            color: #374151;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .faq-section h2 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            color: #1f2937;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #60a5fa;
+        }
+
+        .faq-answer {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #f0fdf4;
+            border: 1px solid #22c55e;
+            color: #15803d;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* Response Time Info */
+        .response-info {
+            background: #eff6ff;
+            border-left: 4px solid #60a5fa;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .response-info p {
+            margin: 0;
+            color: #0c4a6e;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #f3f4f6;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid #374151;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            header nav ul {
+                gap: 0.75rem;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-section,
+            .info-card,
+            .faq-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-section h2,
+            .faq-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .info-card h3 {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-section,
+            .info-card,
+            .faq-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .form-section h2,
+            .faq-section h2 {
+                font-size: 1.25rem;
+            }
+
+            .info-card h3 {
+                font-size: 1.1rem;
+            }
+
+            header .logo {
+                font-size: 1.25rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea,
+            .submit-btn {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="https://www.cvpilothub.com" class="logo">CVPilotHub</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Reach out to our support team anytime.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Contact Form & Info -->
+        <div class="content-grid">
+            <!-- Contact Form -->
+            <div class="form-section">
+                <h2>Send us a Message</h2>
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! We've received your message and will get back to you shortly.
+                </div>
+                <div class="response-info">
+                    <p><strong>Response Time:</strong> We typically respond within 24 business hours.</p>
+                </div>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Please provide details about your inquiry..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>📧 Email Support</h3>
+                    <p>For general inquiries and support requests:</p>
+                    <div class="contact-item">
+                        <strong>Support Email:</strong>
+                        <a href="mailto:support@cvpilothub.com">support@cvpilothub.com</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🤝 Business Inquiries</h3>
+                    <p>For partnerships, collaborations, and corporate matters:</p>
+                    <div class="contact-item">
+                        <strong>Business Email:</strong>
+                        <a href="mailto:business@cvpilothub.com">business@cvpilothub.com</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚖️ Legal Matters</h3>
+                    <p>For privacy, legal, and compliance issues:</p>
+                    <div class="contact-item">
+                        <strong>Legal Email:</strong>
+                        <a href="mailto:legal@cvpilothub.com">legal@cvpilothub.com</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🌐 Website</h3>
+                    <p>Visit our main website for more information:</p>
+                    <div class="contact-item">
+                        <strong>URL:</strong>
+                        <a href="https://www.cvpilothub.com" target="_blank">www.cvpilothub.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ How long does it take to get a response?</div>
+                <div class="faq-answer">We aim to respond to all inquiries within 24 business hours. During peak times, it may take up to 48 hours. Urgent matters are prioritized accordingly.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ What should I do if I forgot my password?</div>
+                <div class="faq-answer">Visit the login page and click "Forgot Password." You'll receive an email with instructions to reset your password. If you don't receive the email, check your spam folder or contact support.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ Can I download my resume in different formats?</div>
+                <div class="faq-answer">Yes! CVPilotHub allows you to download your resume as a PDF. We're continuously adding more format options. Check your account settings for available export formats.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ Is my resume data secure?</div>
+                <div class="faq-answer">Absolutely. We use industry-standard encryption and security measures to protect your data. Your resume is stored securely on our servers, and only you can access it. See our Privacy Policy for more details.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ Can I delete my account?</div>
+                <div class="faq-answer">Yes, you can delete your account anytime from your account settings. Please note that this action is irreversible and will delete all associated data, including your resumes.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ Do you offer refunds?</div>
+                <div class="faq-answer">CVPilotHub is completely free to use. There are no charges or subscriptions. If you have questions about any charges, please contact our support team immediately.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ Can I create multiple resumes?</div>
+                <div class="faq-answer">Yes! You can create unlimited resumes in your account. This is perfect for tailoring your resume to different job applications.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ How do I report a bug or technical issue?</div>
+                <div class="faq-answer">If you encounter any bugs or technical issues, please contact us at support@cvpilothub.com with a detailed description of the problem, including screenshots if possible. Our technical team will investigate and help resolve it.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ Do you offer partnerships or sponsorships?</div>
+                <div class="faq-answer">We're always open to discussing partnership and sponsorship opportunities. Please reach out to business@cvpilothub.com with your proposal and we'll be happy to discuss possibilities.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">❓ Can I use CVPilotHub on mobile devices?</div>
+                <div class="faq-answer">Yes! CVPilotHub is fully responsive and works on all devices including smartphones, tablets, and desktops. You can build and edit your resume on the go.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CVPilotHub. All rights reserved.</p>
+        <p>Email: <a href="mailto:support@cvpilothub.com">support@cvpilothub.com</a> | Website: <a href="https://www.cvpilothub.com">www.cvpilothub.com</a></p>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a> | <a href="#contact">Contact Us</a></p>
+    </footer>
+
+    <script>
+        // Contact Form Handler
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+
+            // Validate form
+            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Show success message
+            successMessage.classList.add('show');
+            
+            // Reset form
+            contactForm.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+
+            // Here you would typically send the data to your server
+            console.log('Form submitted:', formData);
+        });
+    </script>
+</body>
+</html>
