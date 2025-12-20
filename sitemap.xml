@@ -39,7 +39,7 @@
 
     <!-- Privacy Policy (recommended for professional sites) -->
     <url>
-        <loc>https://www.cvpilothub.com/privacy-policy.html</loc>
+        <loc>https://www.cvpilothub.com/privacy.html</loc>
         <lastmod>2025-01-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -47,7 +47,7 @@
 
     <!-- Terms of Service (recommended for professional sites) -->
     <url>
-        <loc>https://www.cvpilothub.com/terms-of-service.html</loc>
+        <loc>https://www.cvpilothub.com/terms.html</loc>
         <lastmod>2025-01-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -55,7 +55,7 @@
 
     <!-- Blog/Resources Section (if exists) -->
     <url>
-        <loc>https://www.cvpilothub.com/blog/</loc>
+        <loc>https://www.cvpilothub.com/article.html</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
